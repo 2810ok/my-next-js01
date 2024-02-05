@@ -1,113 +1,46 @@
-import Image from "next/image";
+import React from 'react';
+import '../pages/index.css';
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <meta charSet="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>vian web</title>
+      <link rel="stylesheet" href="/pages/style-index.css" />
+
+      <nav className="navbar flex justify-center items-center sticky top-0 cursor-pointer bg-opacity-70 bg-black bg-blend-darken bg-cover bg-center" style={{ backgroundImage: 'url("../bg-main.png")', backgroundSize: "90%" }}>
+        <ul className="nav-list w-1/2 flex items-center ">
+          <div className="logo flex w-1/5 justify-center items-center ">
+            <img className="w-2/5 border-2 border-white rounded-full transition-all duration-1000 ease-in-out hover:scale-125" src="../logo.jpeg" alt="logo" />
+          </div>
+          <li className="py-5 px-12"><a className="text-white transition-all ease duration-500 text-base hover:text-gray-500 transition-all ease duration-500e" href="">Home</a></li>
+          <li className="py-5 px-12"><a className="text-white transition-all ease duration-500 text-base hover:text-gray-500 transition-all ease duration-500e" href="">About</a></li>
+          <li className="py-5 px-12"><a className="text-white transition-all ease duration-500 text-base hover:text-gray-500 transition-all ease duration-500e" href="">Services</a></li>
+          <li className="py-5 px-12"><a className="text-white transition-all ease duration-500 text-base hover:text-gray-500 transition-all ease duration-500e" href="">Contact</a></li>
+        </ul>
+        <div className="rightNav w-1/2 text-right px-3 ">
+          <input type="text" name="search" id="search" className="p-2 text-base border-2 border-gray-400 rounded-lg" />
+          <button className="px-5 py-2 my-2 border-2 border-white rounded-lg text-base text-white cursor-pointer hover:text-black hover:bg-white">search</button>
         </div>
-      </div>
+      </nav>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <section className="background h-screen">
+        <div className="box-main flex justify-center items-center text-white font-segoe-ui max-w-70 mx-36 h-full">
+          <div className="w-90 flex justify-center flex-col">
+            <p className="text-5xl text-blue-600">the future of AI is here</p>
+            <p>Welcome to the realm where artistry meets innovation, where each creation is a symphony of elegance and intelligence.<br />At our design sanctuary, we are more than just craftsmen; we are architects of the future, weaving threads of artificial intelligence into the fabric of everyday life.</p>
+            <div className="buttons">
+              <button className="showbtn py-2 px-5 mt-20 border-2 border-white rounded-lg text-lg text-white cursor-pointer hover:text-black hover:bg-white">explore</button>
+              <button className="showbtn py-2 px-5 mt-20 border-2 border-white rounded-lg text-lg text-white cursor-pointer hover:text-black hover:bg-white">watch products</button>
+            </div>
+          </div>
+          <div className="w-30 flex flex-col">
+            <img src="logo.jpeg" alt="laptop img" className="w-70 block mx-auto border-2 border-white rounded-3xl transition-transform duration-1000 transform scale-100 hover:scale-30 hover:rounded-full" />
+            <button className="showbtn py-2 px-5 mt-20 border-2 border-white rounded-lg text-lg text-white cursor-pointer hover:text-black hover:bg-white">achievement</button>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
